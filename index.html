@@ -45,6 +45,15 @@
       backdrop-filter: blur(10px);
     }
 
+    /* CSS */
+.cropped-image {
+  width: 600px;           /* Garde la largeur d'origine */
+  height: 300px;          /* Réduit la hauteur pour rogner le haut et le bas */
+  object-fit: cover;      /* Redimensionne l'image sans la déformer */
+  object-position: center; /* Centre le rognage (coupe à parts égales en haut/bas) */
+  display: block;
+}
+
     .brand-logo img {
       max-height: 45px;
       width: auto;
@@ -344,7 +353,9 @@
   <header>
     <div class="brand-logo">
       <!-- Insert your logo path -->
-      <a href="#"><img src="logo-brothalok.png" alt="BROTHA LOK" onerror="this.outerHTML='<span style=\'font-weight:900;letter-spacing:0.2em;color:#fff;\'>BROTHA LOK</span>'"></a>
+      <a href="#">
+        <img src="logo-brothalok.png" alt="BROTHA LOK" onerror="this.outerHTML='<span style=\'font-weight:900;letter-spacing:0.2em;color:#fff;\'>BROTHA LOK</span>'">
+      </a>
     </div>
     <ul class="nav-links">
       <li><a href="#" class="active">Bio</a></li>
@@ -359,7 +370,7 @@
 
     <!-- PAGE TITLE -->
     <section class="page-header">
-      <h1 class="page-title"><img src="./Logo_Brotha_LOK_BLANC.png" /></h1>
+      <img src="./Logo_Brotha_LOK_BLANC.png" alt="Brotha Lok - Producer, Composer, Arranger" class="cropped-image"/>
       <p class="page-subtitle">Producer • Composer • Arranger</p>
     </section>
 
