@@ -45,47 +45,15 @@
       backdrop-filter: blur(10px);
     }
 
-    /* CSS */
-.cropped-image {
-  width: 250px;           /* Garde la largeur d'origine */
-  height: 120px;          /* Réduit la hauteur pour rogner le haut et le bas */
-  object-fit: cover;      /* Redimensionne l'image sans la déformer */
-  object-position: center; /* Centre le rognage (coupe à parts égales en haut/bas) */
-  display: block;
-}
+    /* CSS LOGO CROPPED */
+    .cropped-image {
+      width: 250px;           /* Garde la largeur d'origine */
+      height: 120px;          /* Réduit la hauteur pour rogner le haut et le bas */
+      object-fit: cover;      /* Redimensionne l'image sans la déformer */
+      object-position: center; /* Centre le rognage */
+      display: block;
+    }
 
-    /* CONTAINER POUR LA VIDÉO ET LE LOGO EN FILIGRANE */
-/* HEADER DE PAGE AVEC LOGO & VIDÉO PLEINE LARGEUR */
-.page-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-/* LOGO DU HAUT */
-.header-logo {
-  max-width: 450px;          /* Largeur maximale du logo */
-  width: 90%;                 /* Responsive sur mobile */
-  height: auto;
-  display: block;
-  margin: 0 auto 25px auto;   /* Espacement sous le logo */
-}
-
-/* CONTENEUR VIDÉO YOUTUBE PLEINE LARGEUR */
-.video-container {
-  position: relative;
-  width: 100%;                /* Occupe toute la largeur du conteneur (1100px max) */
-  aspect-ratio: 16 / 9;       /* Maintient le ratio vidéo standard 16:9 */
-  border: 1px solid #1f1f1f;
-  background-color: #000000;
-  margin-bottom: 20px;
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
     .brand-logo img {
       max-height: 120px;
       display: block;
@@ -109,27 +77,40 @@
       color: #ffffff;
     }
 
-    /* MAIN WRAPPER */
+    /* SECTION VIDÉO PLEINE LARGEUR (100% SCREEN WIDTH) */
+    .full-width-video {
+      width: 100%;
+      background-color: #000000;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      max-height: 80vh; /* Ajuste la hauteur max pour les grands écrans */
+      margin: 0 auto;
+      background-color: #000000;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* MAIN WRAPPER (POUR LE RESTE DU CONTENU) */
     .main-container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 60px 25px;
+      padding: 50px 25px 60px 25px;
     }
 
     /* PAGE TITLE SECTION */
     .page-header {
       text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .page-title {
-      font-family: 'Cinzel', serif;
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin-bottom: 10px;
+      margin-bottom: 40px;
     }
 
     .page-subtitle {
@@ -137,17 +118,6 @@
       text-transform: uppercase;
       letter-spacing: 0.25em;
       color: #777777;
-    }
-
-    /* HERO / FEATURED BANNER PHOTO */
-    .bio-hero-img {
-      width: 100%;
-      height: 480px;
-      object-fit: cover;
-      object-position: center;
-      border: 1px solid #1f1f1f;
-      margin-bottom: 60px;
-      filter: grayscale(25%) contrast(105%);
     }
 
     /* QUOTE / HIGHLIGHT BOX */
@@ -369,12 +339,6 @@
       .bio-grid {
         grid-template-columns: 1fr;
       }
-      .page-title {
-        font-size: 2.2rem;
-      }
-      .bio-hero-img {
-        height: 320px;
-      }
     }
   </style>
 </head>
@@ -383,7 +347,6 @@
   <!-- HEADER / NAVIGATION -->
   <header>
     <div class="brand-logo">
-      <!-- Insert your logo path -->
       <a href="#">
         <img src="./Logo_Brotha_LOK_BLANC.png" alt="BROTHA LOK" class="cropped-image">
       </a>
@@ -396,28 +359,24 @@
     </ul>
   </header>
 
-  <!-- CONTENT CONTAINER -->
+  <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR (100vw) -->
+  <section class="full-width-video">
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/HQH82egFhFY?autoplay=0&rel=0" 
+        title="Brotha Lok Official Video" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- CONTENT CONTAINER (TEXTES ET SECTION BIO) -->
   <div class="main-container">
 
-    <!-- PAGE TITLE -->
-
-    <!-- PAGE TITLE SECTION : LOGO PUIS VIDÉO PLEINE LARGEUR -->
+    <!-- PAGE SUBTITLE -->
     <section class="page-header">
-      
-      <!-- 2. VIDÉO YOUTUBE PLEINE LARGEUR -->
-      <div class="video-container">
-        <!-- Remplacer VIDEO_ID par le lien de ta vidéo YouTube (ex: teaser Bản Nháp ou clip) -->
-        <iframe 
-          src="https://www.youtube.com/embed/HQH82egFhFY?autoplay=0&rel=0" 
-          title="Brotha Lok Official Video" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <!-- SUBTITLE -->
       <p class="page-subtitle">Producer • Composer • Arranger</p>
-
     </section>
 
     <!-- KEYQUOTE -->
@@ -449,7 +408,8 @@
         <h3>Heritage & Syncretism</h3>
         <p>
           Brotha Lok (Lộc) is a French music producer, composer, and arranger based in Toulouse, France. 
-          Rooted in hip-hop culture since 1998 through breakdancing and beatmaking, he has meticulously refined the art of sampling to create a powerful, genre-bending sonic signature.</p>
+          Rooted in hip-hop culture since 1998 through breakdancing and beatmaking, he has meticulously refined the art of sampling to create a powerful, genre-bending sonic signature.
+        </p>
         <p>
           Of White Tai (Thái Trắng) descent—an ethnic minority from Northern Vietnam—Brotha Lok’s artistic journey is deeply intertwined with a quest for cultural identity. 
           While preceding generations focused on integration and assimilation, Brotha Lok operates in the realm of cultural syncretism and "post-memory". 
@@ -469,7 +429,7 @@
           Brotha Lok is also a key architect in the revival of Nhạc Vàng—the nostalgic and poetic popular Vietnamese music banned in 1975. 
           His collaborative spirit has led to heavy-hitting projects with the Saigonese underground scene. 
           Notably, his work during the 2019 Villa Saigon art residency with raw flow rapper Blacka birthed the hit single "Sai Gon Co Em", 
-          which amassed over 30 million views on YouTube after being featured on the hit TV show Rap Viet (Season 2).
+          which amassed over 30 million views on YouTube after being featured on the hit TV show Rap Viet (Season 2). 
           Whether flipping banned bolero vinyl samples into dusty boom-bap tracks or engineering organic fusion EPs, 
           Brotha Lok stands as a unique, transnational force in modern music production—making ancestral memories dance to the beat of a heavy 90s kick.
         </p>
@@ -521,8 +481,7 @@
         <div class="project-card">
           <span class="project-date">Mid-August 2026</span>
           <h4 class="project-name">Remix "Truc Xinh" of Saigon Soul Revival single</h4>
-          <p class="project-desc"> I picked that infectious "La la la" backing vocal gimmick and transformed it into the main hook of the track, layered over a smooth, head-nodding groove.
-Combining Vietnamese cultural heritage with jazzy boom-bap dynamics.</p>
+          <p class="project-desc">I picked that infectious "La la la" backing vocal gimmick and transformed it into the main hook of the track, layered over a smooth, head-nodding groove. Combining Vietnamese cultural heritage with jazzy boom-bap dynamics.</p>
         </div>
 
         <div class="project-card">
