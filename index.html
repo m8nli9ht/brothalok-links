@@ -3,342 +3,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BROTHA LOK | Site Officiel</title>
+  <title>BIOGRAPHY | BROTHA LOK - Official Producer Site</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   
   <style>
-    /* Reset & Styles de base */
+    /* RESET & ESSENTIALS */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    
+
     body {
-      background-color: #0b0b0b;
-      color: #ffffff;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px 15px 40px 15px;
+      background-color: #080808;
+      color: #e0e0e0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
     }
 
-    .container {
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    /* HEADER & NAVIGATION (Minimaliste Style Apollo Brown) */
+    header {
       width: 100%;
-      max-width: 720px;
+      padding: 30px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1a1a1a;
+      background-color: rgba(8, 8, 8, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand-logo img {
+      max-height: 45px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #888888;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #ffffff;
+    }
+
+    /* MAIN WRAPPER */
+    .main-container {
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 60px 25px;
+    }
+
+    /* PAGE TITLE SECTION */
+    .page-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .page-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .page-subtitle {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #777777;
+    }
+
+    /* HERO / FEATURED BANNER PHOTO */
+    .bio-hero-img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid #1f1f1f;
+      margin-bottom: 60px;
+      filter: grayscale(25%) contrast(105%);
+    }
+
+    /* QUOTE / HIGHLIGHT BOX */
+    .quote-box {
+      border-left: 3px solid #d11212;
+      padding: 20px 30px;
+      margin-bottom: 50px;
+      background-color: #0e0e0e;
+    }
+
+    .quote-box p {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: #ffffff;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* ACCREDITATIONS / PRESS BADGES BAR */
+    .press-badges {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 30px;
+      background-color: #111111;
+      border: 1px solid #1f1f1f;
+      margin-bottom: 60px;
       text-align: center;
     }
 
-    /* Logo Artiste */
-    .brand-logo-container {
-      margin-top: 20px;
-      margin-bottom: 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .brand-logo-container img {
-      max-width: 220px;
-      height: auto;
-      display: block;
-      /* Style de secours si l'image ne charge pas */
-      color: #ffffff;
-      font-weight: 900;
-      letter-spacing: 0.15em;
-    }
-
-    /* Jumbotron / Hero Banner (Style Nasir Jones) */
-    .jumbotron {
-      position: relative;
-      width: 100%;
-      height: 380px;
-      background-color: #161616;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 30px;
-      border: 1px solid #222222;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.8);
-      display: flex;
-      align-items: flex-end;
-      text-align: left;
-    }
-
-    /* Arrière-plan du Jumbotron (remplacez l'URL par l'image souhaitée) */
-    .jumbotron-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.6;
-      filter: grayscale(20%);
-    }
-
-    /* Superposition dégradée pour lisibilité */
-    .jumbotron-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to top, rgba(11, 11, 11, 0.95) 10%, rgba(11, 11, 11, 0.2) 100%);
-    }
-
-    .jumbotron-content {
-      position: relative;
-      z-index: 2;
-      padding: 25px;
-      width: 100%;
-    }
-
-    .jumbotron-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 900;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      background-color: #d11212;
-      color: #ffffff;
-      padding: 4px 8px;
-      margin-bottom: 10px;
-      border-radius: 2px;
-    }
-
-    .jumbotron-title {
-      font-size: 1.8rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      line-height: 1.1;
-      margin-bottom: 6px;
-      color: #ffffff;
-    }
-
-    .jumbotron-subtitle {
-      font-size: 0.85rem;
-      font-weight: 300;
-      color: #cccccc;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    /* Section Vidéo YouTube Intégrée */
-    .video-section {
-      margin-bottom: 35px;
-      width: 100%;
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%; /* Ratio 16:9 */
-      height: 0;
-      overflow: hidden;
-      border-radius: 4px;
-      border: 1px solid #222222;
-      background-color: #000000;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* Section Liens Principaux */
-    .links-list {
+    .badge-item {
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      width: 100%;
-      margin-bottom: 40px;
-    }
-
-    .link-card {
-      display: flex;
       align-items: center;
-      justify-content: space-between;
-      background-color: #141414;
-      border: 1px solid #242424;
-      padding: 18px 22px;
-      border-radius: 2px;
-      text-decoration: none;
-      color: #ffffff;
-      transition: all 0.2s ease-in-out;
     }
 
-    .link-card:hover {
-      background-color: #1f1f1f;
-      border-color: #444444;
-      transform: translateY(-2px);
+    .badge-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #d11212;
     }
 
-    .link-title {
+    .badge-desc {
       font-size: 0.85rem;
-      font-weight: 700;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* TWO COLUMN BIO CONTENT */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
+      margin-bottom: 80px;
+    }
+
+    .bio-text h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-top: 30px;
+      margin-bottom: 15px;
       letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: left;
-      padding-right: 10px;
+      border-bottom: 1px solid #222222;
+      padding-bottom: 8px;
     }
 
-    .link-action {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+    .bio-text h3:first-child {
+      margin-top: 0;
+    }
+
+    .bio-text p {
+      margin-bottom: 20px;
+      color: #b0b0b0;
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    /* SIDEBAR (Quick Specs & Highlights) */
+    .bio-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .sidebar-widget {
+      background-color: #0e0e0e;
+      border: 1px solid #1a1a1a;
+      padding: 25px;
+    }
+
+    .widget-title {
+      font-size: 0.8rem;
+      font-weight: 800;
       text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #262626;
+      padding-bottom: 8px;
+    }
+
+    .info-list {
+      list-style: none;
+      font-size: 0.85rem;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
       color: #888888;
-      white-space: nowrap;
     }
 
-    .link-card:hover .link-action {
+    .info-list strong {
       color: #ffffff;
     }
 
-    /* Pied de page */
-    footer {
-      padding-top: 30px;
-      border-top: 1px solid #1c1c1c;
-      width: 100%;
+    /* UPCOMING RELEASES / PROJECTS SECTION */
+    .projects-section {
+      margin-top: 40px;
+      border-top: 1px solid #1a1a1a;
+      padding-top: 60px;
     }
 
-    .social-links {
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background-color: #0e0e0e;
+      border: 1px solid #1c1c1c;
+      padding: 25px;
+      transition: border-color 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: #444444;
+    }
+
+    .project-date {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: #d11212;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .project-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 8px 0;
+      text-transform: uppercase;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: #888888;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #1a1a1a;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 80px;
+      background-color: #050505;
+    }
+
+    .footer-socials {
       display: flex;
       justify-content: center;
-      gap: 18px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
+      gap: 25px;
+      margin-bottom: 25px;
     }
 
-    .social-links a {
-      color: #777777;
-      text-decoration: none;
-      font-size: 0.75rem;
+    .footer-socials a {
+      font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
       text-transform: uppercase;
-      transition: color 0.2s;
+      letter-spacing: 0.1em;
+      color: #666666;
     }
 
-    .social-links a:hover {
+    .footer-socials a:hover {
       color: #ffffff;
     }
 
-    .copyright {
-      font-size: 0.68rem;
+    .footer-copy {
+      font-size: 0.7rem;
       color: #444444;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
-    /* Adaptabilité Écran Mobile */
-    @media (max-width: 480px) {
-      .jumbotron {
-        height: 300px;
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+      header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
       }
-      .jumbotron-title {
-        font-size: 1.35rem;
+      .bio-grid {
+        grid-template-columns: 1fr;
       }
-      .link-card {
-        padding: 14px 16px;
+      .page-title {
+        font-size: 2.2rem;
       }
-      .link-title {
-        font-size: 0.78rem;
-      }
-      .link-action {
-        font-size: 0.65rem;
+      .bio-hero-img {
+        height: 320px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <!-- 1. ENCART LOGO -->
-    <header class="brand-logo-container">
-      <!-- Remplacez le paramètre src par le lien vers votre fichier de logo PNG/SVG -->
-      <img src="logo-brothalok.png" alt="BROTHA LOK LOGO">
-    </header>
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="brand-logo">
+      <!-- Mettez le chemin de votre logo -->
+      <a href="#"><img src="logo-brothalok.png" alt="BROTHA LOK" onerror="this.outerHTML='<span style=\'font-weight:900;letter-spacing:0.2em;color:#fff;\'>BROTHA LOK</span>'"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Bio</a></li>
+      <li><a href="#">Releases</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Label</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
 
-    <!-- 2. JUMBOTRON (Style Nasir Jones) -->
-    <section class="jumbotron">
-      <!-- Remplacez le paramètre src par la visuel d'illustration du Jumbotron -->
-      <img src="jumbotron-cover.jpg" alt="Bản Nháp - The Lost Tape" class="jumbotron-bg" onerror="this.style.display='none'">
-      <div class="jumbotron-overlay"></div>
-      <div class="jumbotron-content">
-        <span class="jumbotron-tag">Nouvelle Mixtape</span>
-        <h2 class="jumbotron-title">BẢN NHÁP : THE LOST TAPES</h2>
-        <p class="jumbotron-subtitle">Projet inédit • Brotha Lok x Blacka</p>
+  <!-- CONTENT CONTAINER -->
+  <div class="main-container">
+
+    <!-- PAGE TITLE -->
+    <section class="page-header">
+      <h1 class="page-title">BIOGRAPHY</h1>
+      <p class="page-subtitle">Producer • Composer • Arranger • Saigon Supersound</p>
+    </section>
+
+    <!-- MAIN HERO IMAGE (Inspiré des portraits studio Apollo Brown) -->
+    <img src="brotha-lok-studio.jpg" alt="Brotha Lok Studio" class="bio-hero-img" onerror="this.src='https://via.placeholder.com/1100x480/111111/ffffff?text=BROTHA+LOK+STUDIO+PORTRAIT'">
+
+    <!-- KEYQUOTE -->
+    <div class="quote-box">
+      <p>« Tisser des ponts invisibles entre le passé et le présent, unissant les rives de l'Asie et de l'Occident à travers le Hip-Hop et l'âme du Nhạc Vàng. »</p>
+    </div>
+
+    <!-- PRESS & RECOGNITION ACCREDITATIONS -->
+    <section class="press-badges">
+      <div class="badge-item">
+        <span class="badge-title">Nomination Officielles</span>
+        <span class="badge-desc">Preis der Deutschen Schallplattenkritik (PdSK)</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-title">Diffusion Radio Nationales</span>
+        <span class="badge-desc">FIP (FR) • Cosmo WDR (DE) • Radio Campus</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-title">Streaming Impact</span>
+        <span class="badge-desc">30M+ Vues YouTube ("Sai Gon Co Em")</span>
       </div>
     </section>
 
-    <!-- 3. SECTION VIDÉO YOUTUBE INTÉGRÉE -->
-    <section class="video-section">
-      <div class="video-container">
-        <!-- Remplacez l'ID de la vidéo YouTube (ici dQw4w9WgXcQ) par le lien de votre vidéo -->
-        <iframe 
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-          title="Brotha Lok - YouTube Video" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
-
-    <!-- 4. LISTE DES LIENS D'ACTION -->
-    <main class="links-list">
+    <!-- BIO GRID (Texte Principal + Sidebar) -->
+    <div class="bio-grid">
       
-      <a href="https://www.instagram.com/brothalok/" target="_blank" rel="noopener" class="link-card">
-        <span class="link-title">OBTENIR LA MIXTAPE "BẢN NHÁP" (MP INSTA)</span>
-        <span class="link-action">Envoyer un MP &#8594;</span>
-      </a>
+      <!-- COLONNE TEXTE -->
+      <article class="bio-text">
+        <h3>L'Héritage et le Syncrétisme</h3>
+        <p>
+          Bercé par la culture Hip-Hop dès 1998 à travers le breakdance et le beatmaking, Brotha Lok (du prénom vietnamien <em>Lộc</em>) est un producteur, compositeur et arrangeur originaire de Toulouse. Issu de la minorité ethnique des Thái Trắng (Thaïs blancs) du Nord du Vietnam, son parcours s'inscrit au cœur d'une trajectoire identitaire singulière : celle du syncrétisme culturel.
+        </p>
+        <p>
+          Là où les générations précédentes ont dû préserver ou adapter leur patrimoine, Brotha Lok entreprend une démarche de réappropriation créative. Il rassemble les fragments de sa double culture pour composer une esthétique contemporaine unique, où les parures traditionnelles dialoguent avec l'énergie urbaine du Boom-Bap.
+        </p>
 
-      <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="link-card">
-        <span class="link-title">REGARDER SUR YOUTUBE</span>
-        <span class="link-action">Voir &#8594;</span>
-      </a>
+        <h3>L'Art du Sample & La Résidence Villa Saigon</h3>
+        <p>
+          Affûtant ses techniques lors de battles reconnus — remportant notamment le concours <em>Drop the Beat 2012</em> jugé par DJ Logilo, Nodey et Al'Tarba —, il perfectionne un style de production chaleureux et texturé. Diplômé d'un Bachelor en Production Audio à l'IMAAT en 2023, il place la recherche organologique au centre de ses créations.
+        </p>
+        <p>
+          En 2019, il participe avec le rappeur saïgonnais Blacka à la résidence d'artistes <em>Villa Saigon</em> organisée par l'Institut Français. Ensemble, ils composent 10 titres façonnés à partir de samples rares de <strong>Nhạc Vàng</strong> — cette musique populaire vietnamienne de style Boléro bannie en 1975. De cette session naît le single phare <em>"Sai Gon Co Em"</em>, devenu un classique instantané dépassant les 30 millions de vues sur YouTube.
+        </p>
 
-      <a href="https://open.spotify.com/" target="_blank" rel="noopener" class="link-card">
-        <span class="link-title">ALBUM "TRỦ LẠI: FLÈCHES CONTRE BALLES"</span>
-        <span class="link-action">Écouter &#8594;</span>
-      </a>
+        <h3>Reconnaissance Internationale & Saigon Supersound</h3>
+        <p>
+          Son expertise sur le Nhạc Vàng le mène naturellement à intégrer le prestigieux label allemand <strong>Saigon Supersound</strong>. En janvier 2024, il publie son premier album solo instrumental <em>"Trủ Lại: Flèches contre balles"</em>, mettant en musique la quête identitaire eurasienne. L'album rencontre un vif succès critique, recevant une nomination au <em>Preis der Deutschen Schallplattenkritik (PdSK)</em> et une diffusion régulière sur les ondes de FIP (France) et Cosmo WDR (Allemagne).
+        </p>
+      </article>
 
-      <a href="https://saigonsoulrevival.bandcamp.com/" target="_blank" rel="noopener" class="link-card">
-        <span class="link-title">SAIGON SOUL REVIVAL - TRÚC XINH</span>
-        <span class="link-action">Pre-Save &#8594;</span>
-      </a>
+      <!-- COLONNE SIDEBAR -->
+      <aside class="bio-sidebar">
+        <div class="sidebar-widget">
+          <h4 class="widget-title">Fiche Artiste</h4>
+          <ul class="info-list">
+            <li><strong>Origine :</strong> Toulouse, France</li>
+            <li><strong>Héritage :</strong> Thái Trắng / Vietnam</li>
+            <li><strong>Affiliation :</strong> SACEM / Saigon Supersound</li>
+            <li><strong>Formation :</strong> Bachelor Audio IMAAT (2023)</li>
+            <li><strong>Genres :</strong> Hip-Hop, Boom-Bap, Nhạc Vàng, World</li>
+          </ul>
+        </div>
 
-      <a href="https://www.saigonsupersound.com/" target="_blank" rel="noopener" class="link-card">
-        <span class="link-title">SAIGON SUPERSOUND LABEL</span>
-        <span class="link-action">Découvrir &#8594;</span>
-      </a>
+        <div class="sidebar-widget">
+          <h4 class="widget-title">Collaborations Clés</h4>
+          <ul class="info-list">
+            <li>• Blacka (Vietnam)</li>
+            <li>• Saigon Soul Revival / Hera Paradise</li>
+            <li>• Afu-Ra (USA)</li>
+            <li>• 10vers (France)</li>
+            <li>• Hazard Clique (Saigon)</li>
+          </ul>
+        </div>
+      </aside>
 
-    </main>
+    </div>
 
-    <!-- 5. PIED DE PAGE / RÉSEAUX SOCIAUX -->
-    <footer>
-      <div class="social-links">
-        <a href="https://www.instagram.com/brothalok/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
-        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+    <!-- PROJETS EN COURS / PROCHAINES SORTIES -->
+    <section class="projects-section">
+      <h2 class="section-title">Discographie & Projets à venir</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <span class="project-date">27 Juillet 2026</span>
+          <h4 class="project-name">Mixtape "Bản nháp: The Lost Tapes"</h4>
+          <p class="project-desc">Compilation des sessions inédites enregistrées à la Villa Saigon en 2019 avec Blacka, réarrangées et remises en lumière.</p>
+        </div>
+
+        <div class="project-card">
+          <span class="project-date">Août 2026</span>
+          <h4 class="project-name">Single "Bản Nháp" feat. Blacka & Mikeezy</h4>
+          <p class="project-desc">Single banger réunissant deux figures majeures du Rap Viet sur un beat Boom-Bap aux samples Nhạc Vàng ciselés.</p>
+        </div>
+
+        <div class="project-card">
+          <span class="project-date">À partir de Nov. 2026</span>
+          <h4 class="project-name">EP "The Living Roots Bridge"</h4>
+          <p class="project-desc">EP 5 titres en collaboration avec Hera Paradise (Saigon Soul Revival) réinterprétant les grands classiques du Nhạc Vàng.</p>
+        </div>
+
       </div>
-      <p class="copyright">&copy; 2026 BROTHA LOK. SAIGON SUPERSOUND.</p>
-    </footer>
+    </section>
 
   </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/brothalok/" target="_blank">Instagram</a>
+      <a href="https://open.spotify.com/" target="_blank">Spotify</a>
+      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+      <a href="https://www.saigonsupersound.com/" target="_blank">Saigon Supersound</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BROTHA LOK. ALL RIGHTS RESERVED. REGISTERED SACEM ARTIST.</p>
+  </footer>
 
 </body>
 </html>
