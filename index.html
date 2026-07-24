@@ -54,6 +54,45 @@
   display: block;
 }
 
+    /* CONTAINER POUR LA VIDÉO ET LE LOGO EN FILIGRANE */
+.video-header-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Ajustable selon la largeur souhaitée */
+  margin: 0 auto 30px auto;
+  aspect-ratio: 16 / 9; /* Maintient le ratio 16:9 de la vidéo YouTube */
+  border: 1px solid #1f1f1f;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* L'IFRAME YOUTUBE */
+.video-header-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* LE LOGO EN FILIGRANE (OVERLAY) */
+.logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Ajuste la taille du logo sur la vidéo */
+  max-width: 450px;
+  pointer-events: none; /* Permet de cliquer sur la vidéo derrière le logo */
+  opacity: 0.35; /* Niveau de transparence du filigrane (0.1 à 1.0) */
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Optionnel : Assombrit légèrement au survol si besoin ou masque le logo au survol */
+.video-header-container:hover .logo-overlay {
+  opacity: 0.15;
+}
+
     .brand-logo img {
       max-height: 45px;
       width: auto;
@@ -369,8 +408,21 @@
   <div class="main-container">
 
     <!-- PAGE TITLE -->
+    <!-- PAGE HEADER WITH YOUTUBE VIDEO & LOGO OVERLAY -->
     <section class="page-header">
-      <img src="./Logo_Brotha_LOK_BLANC.png" alt="Brotha Lok - Producer, Composer, Arranger" class="cropped-image"/>
+      <div class="video-header-container">
+        <!-- Remplacer VIDEO_ID par l'identifiant YouTube souhaité -->
+        <iframe 
+          src="https://www.youtube.com/embed/HQH82egFhFY?autoplay=0&rel=0" 
+          title="Brotha Lok YouTube Video" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+        
+        <!-- Logo en filigrane par-dessus la vidéo -->
+        <img src="./Logo_Brotha_LOK_BLANC.png" alt="Brotha Lok Logo Overlay" class="logo-overlay" />
+      </div>
+      
       <p class="page-subtitle">Producer • Composer • Arranger</p>
     </section>
 
