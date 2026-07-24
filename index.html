@@ -47,8 +47,8 @@
 
     /* CSS */
 .cropped-image {
-  width: 600px;           /* Garde la largeur d'origine */
-  height: 300px;          /* Réduit la hauteur pour rogner le haut et le bas */
+  width: 150px;           /* Garde la largeur d'origine */
+  height: 80px;          /* Réduit la hauteur pour rogner le haut et le bas */
   object-fit: cover;      /* Redimensionne l'image sans la déformer */
   object-position: center; /* Centre le rognage (coupe à parts égales en haut/bas) */
   display: block;
@@ -386,7 +386,7 @@
     <div class="brand-logo">
       <!-- Insert your logo path -->
       <a href="#">
-        <img src="./Logo_Brotha_LOK_BLANC.png" alt="BROTHA LOK" onerror="this.outerHTML='<span style=\'font-weight:900;letter-spacing:0.2em;color:#fff;\'>BROTHA LOK</span>'">
+        <img src="./Logo_Brotha_LOK_BLANC.png" alt="BROTHA LOK" class="cropped-image">
       </a>
     </div>
     <ul class="nav-links">
@@ -405,9 +405,6 @@
     <!-- PAGE TITLE SECTION : LOGO PUIS VIDÉO PLEINE LARGEUR -->
     <section class="page-header">
       
-      <!-- 1. LOGO EN HAUT -->
-      <img src="./Logo_Brotha_LOK_BLANC.png" alt="Brotha Lok - Producer, Composer, Arranger" class="header-logo" />
-
       <!-- 2. VIDÉO YOUTUBE PLEINE LARGEUR -->
       <div class="video-container">
         <!-- Remplacer VIDEO_ID par le lien de ta vidéo YouTube (ex: teaser Bản Nháp ou clip) -->
@@ -423,9 +420,6 @@
       <p class="page-subtitle">Producer • Composer • Arranger</p>
 
     </section>
-
-    <!-- MAIN HERO IMAGE (Inspired by Apollo Brown studio portraits) -->
-    <img src="brotha-lok-studio.jpg" alt="Brotha Lok Studio" class="bio-hero-img" onerror="this.src='https://via.placeholder.com/1100x480/111111/ffffff?text=BROTHA+LOK+STUDIO+PORTRAIT'">
 
     <!-- KEYQUOTE -->
     <div class="quote-box">
