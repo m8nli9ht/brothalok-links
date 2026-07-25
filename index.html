@@ -360,15 +360,25 @@
   </header>
 
   <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR (100vw) -->
-  <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR (100vw) -->
 <section class="full-width-video">
   <div class="video-container">
     <iframe 
-      src="https://www.youtube.com/embed/HQH82egFhFY?autoplay=1&mute=1&start=10&end=30&rel=0" 
+      id="main-video-player"
+      src="https://www.youtube.com/embed/HQH82egFhFY?autoplay=1&mute=1&enablejsapi=1&start=10&end=30&rel=0" 
       title="Brotha Lok Official Video" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>
+  </div>
+
+  <!-- SELECTEUR DE VIDÉOS -->
+  <div class="video-switcher">
+    <button class="video-btn active" onclick="switchVideo('HQH82egFhFY', 10, 30, this)">
+      "Temujin's Blue Note"
+    </button>
+    <button class="video-btn" onclick="switchVideo('8HMwCKMFz70', 0, 0, this)">
+      "Ice Kem"
+    </button>
   </div>
 </section>
 
