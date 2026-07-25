@@ -9,6 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   
   <style>
+    /* AUTO SCROLL FLUIDE */
+    html {
+      scroll-behavior: smooth;
+    }
+
     /* RESET & ESSENTIALS */
     * {
       box-sizing: border-box;
@@ -77,6 +82,11 @@
       color: #ffffff;
     }
 
+    /* GESTION DE LA MARGE DES ANCRES (évite le chevauchement avec le header fixe) */
+    section, .main-container, footer {
+      scroll-margin-top: 100px;
+    }
+
     /* SECTION VIDÉO PLEINE LARGEUR (100% SCREEN WIDTH) */
     .full-width-video {
       width: 100%;
@@ -101,40 +111,40 @@
     }
 
     /* SÉLECTEUR DE VIDÉO */
-.video-switcher {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px 10px;
-  background-color: #080808;
-  border-bottom: 1px solid #1a1a1a;
-  flex-wrap: wrap;
-}
+    .video-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px 10px;
+      background-color: #080808;
+      border-bottom: 1px solid #1a1a1a;
+      flex-wrap: wrap;
+    }
 
-.video-btn {
-  background-color: #0e0e0e;
-  border: 1px solid #222222;
-  color: #888888;
-  padding: 10px 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+    .video-btn {
+      background-color: #0e0e0e;
+      border: 1px solid #222222;
+      color: #888888;
+      padding: 10px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-.video-btn:hover {
-  color: #ffffff;
-  border-color: #d11212;
-}
+    .video-btn:hover {
+      color: #ffffff;
+      border-color: #d11212;
+    }
 
-.video-btn.active {
-  background-color: #d11212;
-  color: #ffffff;
-  border-color: #d11212;
-}
+    .video-btn.active {
+      background-color: #d11212;
+      color: #ffffff;
+      border-color: #d11212;
+    }
 
     /* MAIN WRAPPER (POUR LE RESTE DU CONTENU) */
     .main-container {
@@ -383,46 +393,46 @@
   <!-- HEADER / NAVIGATION -->
   <header>
     <div class="brand-logo">
-      <a href="#">
+      <a href="#videos">
         <img src="./Logo_Brotha_LOK_BLANC.png" alt="BROTHA LOK" class="cropped-image">
       </a>
     </div>
     <ul class="nav-links">
-      <li><a href="#" class="active">Bio</a></li>
-      <li><a href="#">Releases</a></li>
-      <li><a href="#">Videos</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#releases">Releases</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
   <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR (100vw) -->
-<section class="full-width-video">
-  <div class="video-container">
-    <iframe 
-      id="main-video-player"
-      src="https://www.youtube.com/embed/HQH82egFhFY?autoplay=1&mute=1&enablejsapi=1&start=10&end=30&rel=0" 
-      title="Brotha Lok Official Video" 
-      allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
+  <section id="videos" class="full-width-video">
+    <div class="video-container">
+      <iframe 
+        id="main-video-player"
+        src="https://www.youtube.com/embed/HQH82egFhFY?autoplay=1&mute=1&enablejsapi=1&start=10&end=30&rel=0" 
+        title="Brotha Lok Official Video" 
+        allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
-  <!-- SELECTEUR DE VIDÉOS -->
-  <div class="video-switcher">
-    <button class="video-btn active" onclick="switchVideo('HQH82egFhFY', 10, 30, this)">
-      "Temujin's Blue Note"
-    </button>
-    <button class="video-btn" onclick="switchVideo('8HMwCKMFz70', 0, 0, this)">
-      "Ice Kem"
-    </button>
-    <button class="video-btn" onclick="switchVideo('WYKV1it_fQ4', 0, 0, this)">
-      "Ice Kem making of"
-    </button>
-  </div>
-</section>
+    <!-- SELECTEUR DE VIDÉOS -->
+    <div class="video-switcher">
+      <button class="video-btn active" onclick="switchVideo('HQH82egFhFY', 10, 30, this)">
+        "Temujin's Blue Note"
+      </button>
+      <button class="video-btn" onclick="switchVideo('8HMwCKMFz70', 0, 0, this)">
+        "Ice Kem"
+      </button>
+      <button class="video-btn" onclick="switchVideo('WYKV1it_fQ4', 0, 0, this)">
+        "Ice Kem making of"
+      </button>
+    </div>
+  </section>
 
   <!-- CONTENT CONTAINER (TEXTES ET SECTION BIO) -->
-  <div class="main-container">
+  <div id="bio" class="main-container">
 
     <!-- PAGE SUBTITLE -->
     <section class="page-header">
@@ -512,7 +522,7 @@
     </div>
 
     <!-- UPCOMING RELEASES / PROJECTS SECTION -->
-    <section class="projects-section">
+    <section id="releases" class="projects-section">
       <h2 class="section-title">Discography & Upcoming Projects</h2>
       <div class="projects-grid">
         
@@ -546,7 +556,7 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="contact">
     <div class="footer-socials">
       <a href="https://www.instagram.com/brothalok/" target="_blank">Instagram</a>
       <a href="https://open.spotify.com/" target="_blank">Spotify</a>
@@ -556,25 +566,24 @@
     <p class="footer-copy">&copy; 2026 BROTHA LOK. ALL RIGHTS RESERVED. REGISTERED SACEM ARTIST.</p>
   </footer>
 
-</body>
-
   <script>
-  function switchVideo(videoId, startSec = 0, endSec = 0, element) {
-    const iframe = document.getElementById('main-video-player');
-    
-    // Construction de la nouvelle URL avec autoplay & mute
-    let newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&enablejsapi=1&rel=0`;
-    
-    if (startSec > 0) newSrc += `&start=${startSec}`;
-    if (endSec > 0) newSrc += `&end=${endSec}`;
+    function switchVideo(videoId, startSec = 0, endSec = 0, element) {
+      const iframe = document.getElementById('main-video-player');
+      
+      // Construction de la nouvelle URL avec autoplay & mute
+      let newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&enablejsapi=1&rel=0`;
+      
+      if (startSec > 0) newSrc += `&start=${startSec}`;
+      if (endSec > 0) newSrc += `&end=${endSec}`;
 
-    // Mise à jour de la vidéo
-    iframe.src = newSrc;
+      // Mise à jour de la vidéo
+      iframe.src = newSrc;
 
-    // Gestion visuelle du bouton actif
-    const buttons = document.querySelectorAll('.video-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    element.classList.add('active');
-  }
-</script>
+      // Gestion visuelle du bouton actif
+      const buttons = document.querySelectorAll('.video-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+    }
+  </script>
+</body>
 </html>
