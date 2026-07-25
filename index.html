@@ -38,7 +38,7 @@
     /* HEADER & NAVIGATION */
     header {
       width: 100%;
-      padding: 30px 50px;
+      padding: 20px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -64,6 +64,14 @@
       display: block;
     }
 
+    /* CONTENEUR DE LA NAVIGATION & DES RÉSEAUX */
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
     .nav-links {
       display: flex;
       gap: 30px;
@@ -80,6 +88,32 @@
 
     .nav-links a:hover, .nav-links a.active {
       color: #ffffff;
+    }
+
+    /* BARRE DES ICÔNES NETWORKS & PLATFORMS */
+    .header-socials {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-socials a {
+      color: #777777;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .header-socials a:hover {
+      color: #d11212;
+      transform: translateY(-2px);
+    }
+
+    .header-socials svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
 
     /* GESTION DE LA MARGE DES ANCRES */
@@ -110,7 +144,7 @@
       display: block;
     }
 
-    /* SÉLECTEUR DE VIDÉO */
+    /* SÉLECTEUR DE VIDÉO AVEC ICÔNES */
     .video-switcher {
       display: flex;
       justify-content: center;
@@ -133,6 +167,15 @@
       letter-spacing: 0.12em;
       cursor: pointer;
       transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .video-btn .video-icon {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
     }
 
     .video-btn:hover {
@@ -284,7 +327,7 @@
       color: #ffffff;
     }
 
-    /* TITRES DE SECTIONS GENERALES */
+    /* TITRES DE SECTIONS */
     .section-title {
       font-family: 'Cinzel', serif;
       font-size: 1.8rem;
@@ -295,7 +338,7 @@
       text-align: center;
     }
 
-    /* SECTION DISCOGRAPHY / PAST RELEASES (NOUVEAU) */
+    /* DISCOGRAPHY / PAST RELEASES */
     .discography-section {
       border-top: 1px solid #1a1a1a;
       padding-top: 60px;
@@ -418,7 +461,7 @@
       border-color: #555555;
     }
 
-    /* UPCOMING RELEASES / PROJECTS SECTION */
+    /* UPCOMING RELEASES */
     .projects-section {
       border-top: 1px solid #1a1a1a;
       padding-top: 60px;
@@ -505,6 +548,9 @@
         flex-direction: column;
         gap: 15px;
       }
+      .header-right {
+        align-items: center;
+      }
       .bio-grid {
         grid-template-columns: 1fr;
       }
@@ -520,12 +566,43 @@
         <img src="./Logo_Brotha_LOK_BLANC.png" alt="BROTHA LOK" class="cropped-image">
       </a>
     </div>
-    <ul class="nav-links">
-      <li><a href="#bio">Bio</a></li>
-      <li><a href="#discography">Releases</a></li>
-      <li><a href="#videos">Videos</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+    <div class="header-right">
+      <ul class="nav-links">
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#discography">Releases</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- ICÔNES DE RÉSEAUX & PLATEFORMES EN ENTÊTE -->
+      <div class="header-socials">
+        <!-- Spotify -->
+        <a href="https://open.spotify.com/" target="_blank" title="Spotify">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.899 4.62-1.02 8.52-.6 11.64 1.32.42.18.479.659.301 1.019zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.18-.1.2-1.2-.42-.18-.6.18-1.2.6-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        </a>
+        <!-- Deezer -->
+        <a href="https://www.deezer.com/" target="_blank" title="Deezer">
+          <svg viewBox="0 0 24 24"><path d="M22.5 18h-4.5v3h4.5v-3zm-6 0h-4.5v3h4.5v-3zm-6 0H6v3h4.5v-3zm-6 0H0v3h4.5v-3zm18-4.5h-4.5v3h4.5v-3zm-6 0h-4.5v3h4.5v-3zm-6 0H6v3h4.5v-3zm18-4.5h-4.5v3h4.5v-3zm0-4.5h-4.5v3h4.5V4.5zM10.5 13.5H6v3h4.5v-3zm0-4.5H6v3h4.5V9zm0-4.5H6v3h4.5V4.5zM4.5 13.5H0v3h4.5v-3z"/></svg>
+        </a>
+        <!-- Apple Music -->
+        <a href="https://music.apple.com/" target="_blank" title="Apple Music">
+          <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.39c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 0.6-2.65 1.36-.58.68-1.09 1.76-.95 2.8.99.08 2.02-.51 2.68-1.31z"/></svg>
+        </a>
+        <!-- Bandcamp -->
+        <a href="https://bandcamp.com/" target="_blank" title="Bandcamp">
+          <svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/brothalok/" target="_blank" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
   </header>
 
   <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR -->
@@ -540,16 +617,19 @@
       </iframe>
     </div>
 
-    <!-- SELECTEUR DE VIDÉOS -->
+    <!-- SELECTEUR DE VIDÉOS AVEC ICÔNES -->
     <div class="video-switcher">
-      <button class="play-track-btn active" onclick="switchVideo('HQH82egFhFY', 10, 30, this)">
-        ▶ Temujin's Blue Note
+      <button class="video-btn active" onclick="switchVideo('HQH82egFhFY', 10, 30, this)">
+        <svg class="video-icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+        "Temujin's Blue Note"
       </button>
-      <button class="play-track-btn" onclick="switchVideo('8HMwCKMFz70', 0, 0, this)">
-        ▶ Ice Kem
+      <button class="video-btn" onclick="switchVideo('8HMwCKMFz70', 0, 0, this)">
+        <svg class="video-icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+        "Ice Kem"
       </button>
-      <button class="play-track-btn" onclick="switchVideo('WYKV1it_fQ4', 0, 0, this)">
-        ▶ Ice Kem making of
+      <button class="video-btn" onclick="switchVideo('WYKV1it_fQ4', 0, 0, this)">
+        <svg class="video-icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+        "Ice Kem making of"
       </button>
     </div>
   </section>
@@ -639,7 +719,7 @@
       </div>
     </section>
 
-    <!-- SECTION DISCOGRAPHY / PAST RELEASES (NOUVELLE SECTION AUDIO PORTFOLIO) -->
+    <!-- SECTION DISCOGRAPHY / PAST RELEASES -->
     <section id="discography" class="discography-section">
       <h2 class="section-title">Discography & Past Releases</h2>
       
@@ -649,8 +729,7 @@
         <div class="album-card">
           <div>
             <div class="album-cover-container">
-              <!-- Remplacez par le chemin exact de votre visuel -->
-              <img src="./TRULAI_COVER_800x800.jpg"" alt="Tru Lai Album Cover" class="album-cover">
+              <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=500" alt="Tru Lai Album Cover" class="album-cover">
             </div>
             <div class="album-meta">
               <span>Jan 2024</span>
@@ -658,13 +737,12 @@
             </div>
             <h3 class="album-title">Tru Lai: Flèches contre balles</h3>
             <p class="album-subtitle">Debut Instrumental Album • Vinyl & Digital</p>
-            <p class="album-desc">Nominated for the Preis der Deutschen Schallplattenkritik (PdSK). A deep exploration into Nhạc Vàng vinyl samples fused with dusty Boom-Bap drums.</p>
+            <p class="album-desc">Nominated for the Preis der Deutschen Schallplattenkritik (PdSK). Directed by Louis Barber Corallo & The Cake Collective. Shot on location in Ho Chi Minh City.</p>
           </div>
           <div class="album-actions">
-            <a class="play-track-btn" href="https://open.spotify.com/intl-fr/album/2wGz0jxTDLcqy18yxyH22H" target="_blank" class="stream-link">▶ Spotify</a>
-            <a class="play-track-btn" href="https://www.deezer.com/fr/album/528784442" target="_blank" class="stream-link">▶ Deezer</a>
-            <a class="play-track-btn" href="https://music.apple.com/fr/album/tru-lai-fl%C3%A8ches-contre-balles-chapter-1/1723355753" target="_blank" class="stream-link">▶ Apple</a>
-            <a class="play-track-btn" href="https://brothalok.bandcamp.com/album/true-lai-fl-ches-contre-balles" target="_blank" class="stream-link">▶ BandCamp</a>
+            <button class="play-track-btn" onclick="playAndScroll('HQH82egFhFY')">▶ Play Track</button>
+            <a href="https://open.spotify.com" target="_blank" class="stream-link">Spotify</a>
+            <a href="https://bandcamp.com" target="_blank" class="stream-link">Bandcamp</a>
           </div>
         </div>
 
@@ -672,26 +750,47 @@
         <div class="album-card">
           <div>
             <div class="album-cover-container">
-              <img src="./bl.webp" alt="Sai Gon Co Em Cover" class="album-cover">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=500" alt="Sai Gon Co Em Cover" class="album-cover">
             </div>
             <div class="album-meta">
-              <span>2019</span>
-              <span>Villa Saigon Session</span>
+              <span>2019 / 2021</span>
+              <span>Villa Saigon Sessions</span>
             </div>
             <h3 class="album-title">Sai Gon Co Em</h3>
             <p class="album-subtitle">Single feat. Blacka</p>
             <p class="album-desc">30M+ YouTube views. Originally produced during the Villa Saigon artist residency and showcased on Rap Viet (Season 2), featuring a heavy, flipped sample of Y Vân's classic repertoire.</p>
           </div>
           <div class="album-actions">
-            <a class="play-track-btn" href="https://open.spotify.com/intl-fr/track/6mLXOeT21ES6iZB8bfiGI6" target="_blank" class="stream-link">▶ Spotify</a>
-            <a class="play-track-btn" href="https://www.youtube.com/watch?v=40uzcz0QljU&t=110s" target="_blank" class="stream-link">▶ YouTube</a>
+            <button class="play-track-btn" onclick="playAndScroll('8HMwCKMFz70')">▶ Play Track</button>
+            <a href="https://open.spotify.com" target="_blank" class="stream-link">Spotify</a>
+            <a href="https://youtube.com" target="_blank" class="stream-link">YouTube</a>
+          </div>
+        </div>
+
+        <!-- SINGLE / REMIX 2 -->
+        <div class="album-card">
+          <div>
+            <div class="album-cover-container">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=500" alt="Ice Kem Cover" class="album-cover">
+            </div>
+            <div class="album-meta">
+              <span>2023</span>
+              <span>Independent</span>
+            </div>
+            <h3 class="album-title">Ice Kem</h3>
+            <p class="album-subtitle">Single Track</p>
+            <p class="album-desc">Heavy-hitting analog beats with intricate chop sampling techniques, bridging Western Boom-Bap texture with Asian musical roots.</p>
+          </div>
+          <div class="album-actions">
+            <button class="play-track-btn" onclick="playAndScroll('WYKV1it_fQ4')">▶ Play Track</button>
+            <a href="https://open.spotify.com" target="_blank" class="stream-link">Spotify</a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- UPCOMING RELEASES / PROJECTS SECTION -->
+    <!-- UPCOMING RELEASES -->
     <section id="releases" class="projects-section">
       <h2 class="section-title">Upcoming Projects</h2>
       <div class="projects-grid">
@@ -737,10 +836,8 @@
   </footer>
 
   <script>
-    // Fonction principale de changement de vidéo
     function switchVideo(videoId, startSec = 0, endSec = 0, element = null) {
       const iframe = document.getElementById('main-video-player');
-      
       let newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&enablejsapi=1&rel=0`;
       
       if (startSec > 0) newSrc += `&start=${startSec}`;
@@ -755,7 +852,6 @@
       }
     }
 
-    // Jouer le morceau et remonter doucement vers le lecteur vidéo principal
     function playAndScroll(videoId) {
       switchVideo(videoId, 0, 0, null);
       document.getElementById('videos').scrollIntoView({ behavior: 'smooth' });
