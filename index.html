@@ -24,7 +24,7 @@
     body {
       background-color: #080808;
       color: #e0e0e0;
-      font-family: 'Inconsolata', Sans-serif;
+      font-family: 'Inter', sans-serif;
       line-height: 1.7;
       letter-spacing: 0.02em;
     }
@@ -35,7 +35,7 @@
       transition: all 0.3s ease;
     }
 
-    /* HEADER & NAVIGATION (Apollo Brown Minimalist Style) */
+    /* HEADER & NAVIGATION */
     header {
       width: 100%;
       padding: 30px 50px;
@@ -52,10 +52,10 @@
 
     /* CSS LOGO CROPPED */
     .cropped-image {
-      width: 250px;           /* Garde la largeur d'origine */
-      height: 120px;          /* Réduit la hauteur pour rogner le haut et le bas */
-      object-fit: cover;      /* Redimensionne l'image sans la déformer */
-      object-position: center; /* Centre le rognage */
+      width: 250px;
+      height: 120px;
+      object-fit: cover;
+      object-position: center;
       display: block;
     }
 
@@ -82,12 +82,12 @@
       color: #ffffff;
     }
 
-    /* GESTION DE LA MARGE DES ANCRES (évite le chevauchement avec le header fixe) */
+    /* GESTION DE LA MARGE DES ANCRES */
     section, .main-container, footer {
       scroll-margin-top: 100px;
     }
 
-    /* SECTION VIDÉO PLEINE LARGEUR (100% SCREEN WIDTH) */
+    /* SECTION VIDÉO PLEINE LARGEUR */
     .full-width-video {
       width: 100%;
       background-color: #000000;
@@ -98,7 +98,7 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      max-height: 80vh; /* Ajuste la hauteur max pour les grands écrans */
+      max-height: 80vh;
       margin: 0 auto;
       background-color: #000000;
     }
@@ -146,7 +146,7 @@
       border-color: #d11212;
     }
 
-    /* MAIN WRAPPER (POUR LE RESTE DU CONTENU) */
+    /* MAIN WRAPPER */
     .main-container {
       max-width: 1100px;
       margin: 0 auto;
@@ -182,7 +182,7 @@
       line-height: 1.5;
     }
 
-    /* ACCREDITATIONS / PRESS BADGES BAR */
+    /* PRESS BADGES */
     .press-badges {
       display: flex;
       justify-content: space-around;
@@ -246,7 +246,7 @@
       text-align: justify;
     }
 
-    /* SIDEBAR (Quick Specs & Highlights) */
+    /* SIDEBAR */
     .bio-sidebar {
       display: flex;
       flex-direction: column;
@@ -284,13 +284,7 @@
       color: #ffffff;
     }
 
-    /* UPCOMING RELEASES / PROJECTS SECTION */
-    .projects-section {
-      margin-top: 40px;
-      border-top: 1px solid #1a1a1a;
-      padding-top: 60px;
-    }
-
+    /* TITRES DE SECTIONS GENERALES */
     .section-title {
       font-family: 'Cinzel', serif;
       font-size: 1.8rem;
@@ -299,6 +293,135 @@
       color: #ffffff;
       margin-bottom: 35px;
       text-align: center;
+    }
+
+    /* SECTION DISCOGRAPHY / PAST RELEASES (NOUVEAU) */
+    .discography-section {
+      border-top: 1px solid #1a1a1a;
+      padding-top: 60px;
+      margin-bottom: 80px;
+    }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .album-card {
+      background-color: #0e0e0e;
+      border: 1px solid #1c1c1c;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.3s ease;
+    }
+
+    .album-card:hover {
+      border-color: #d11212;
+    }
+
+    .album-cover-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      margin-bottom: 15px;
+      background-color: #1a1a1a;
+    }
+
+    .album-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .album-card:hover .album-cover {
+      transform: scale(1.05);
+    }
+
+    .album-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #d11212;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .album-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .album-subtitle {
+      font-size: 0.85rem;
+      color: #888888;
+      margin-bottom: 15px;
+    }
+
+    .album-desc {
+      font-size: 0.85rem;
+      color: #aaaaaa;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .album-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 15px;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .play-track-btn {
+      background-color: #d11212;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .play-track-btn:hover {
+      background-color: #b00d0d;
+    }
+
+    .stream-link {
+      font-size: 0.75rem;
+      color: #888888;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border: 1px solid #222222;
+    }
+
+    .stream-link:hover {
+      color: #ffffff;
+      border-color: #555555;
+    }
+
+    /* UPCOMING RELEASES / PROJECTS SECTION */
+    .projects-section {
+      border-top: 1px solid #1a1a1a;
+      padding-top: 60px;
     }
 
     .projects-grid {
@@ -399,13 +522,13 @@
     </div>
     <ul class="nav-links">
       <li><a href="#bio">Bio</a></li>
-      <li><a href="#releases">Releases</a></li>
+      <li><a href="#discography">Releases</a></li>
       <li><a href="#videos">Videos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
-  <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR (100vw) -->
+  <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR -->
   <section id="videos" class="full-width-video">
     <div class="video-container">
       <iframe 
@@ -431,99 +554,166 @@
     </div>
   </section>
 
-  <!-- CONTENT CONTAINER (TEXTES ET SECTION BIO) -->
-  <div id="bio" class="main-container">
+  <!-- CONTENT CONTAINER -->
+  <div class="main-container">
 
-    <!-- PAGE SUBTITLE -->
-    <section class="page-header">
-      <p class="page-subtitle">Producer • Composer • Arranger</p>
+    <!-- BIO SECTION -->
+    <section id="bio">
+      <div class="page-header">
+        <p class="page-subtitle">Producer • Composer • Arranger</p>
+      </div>
+
+      <div class="quote-box">
+        <p>“Weaving invisible bridges between past and present, uniting the shores of Asia and the West through Hip-Hop and the soul of Nhạc Vàng.”</p>
+      </div>
+
+      <div class="press-badges">
+        <div class="badge-item">
+          <span class="badge-title">Official Nomination</span>
+          <span class="badge-desc">Preis der Deutschen Schallplattenkritik (PdSK)</span>
+        </div>
+        <div class="badge-item">
+          <span class="badge-title">National Radio Broadcasts</span>
+          <span class="badge-desc">FIP (FR) • Cosmo WDR (DE) • Radio Campus</span>
+        </div>
+        <div class="badge-item">
+          <span class="badge-title">Streaming Impact</span>
+          <span class="badge-desc">30M+ YouTube Views ("Sai Gon Co Em")</span>
+        </div>
+      </div>
+
+      <div class="bio-grid">
+        <article class="bio-text">
+          <h3>Heritage & Syncretism</h3>
+          <p>
+            Brotha Lok (Lộc) is a French music producer, composer, and arranger based in Toulouse, France. 
+            Rooted in hip-hop culture since 1998 through breakdancing and beatmaking, he has meticulously refined the art of sampling to create a powerful, genre-bending sonic signature.
+          </p>
+          <p>
+            Of White Tai (Thái Trắng) descent—an ethnic minority from Northern Vietnam—Brotha Lok’s artistic journey is deeply intertwined with a quest for cultural identity. 
+            While preceding generations focused on integration and assimilation, Brotha Lok operates in the realm of cultural syncretism and "post-memory". 
+            He gathers the fragmented heritage of his ancestors and welds them with raw, heavy-hitting underground hip-hop, constructing a musical bridge between East and West, past and present.
+          </p>
+
+          <h3>Craft & Recognition</h3>
+          <p>
+            A formally trained audio engineer with a Bachelor’s degree in Audio Production from IMAAT, his technical expertise matches his artistic vision. 
+            His groundbreaking work caught the attention of the acclaimed German label Saigon Supersound, which distributed his debut instrumental solo album, "Tru Lai: Flèches contre balles" (January 2024). 
+            The project received international critical acclaim, earning a prestigious nomination for the Preis der Deutschen Schallplattenkritik (PdSK) and receiving significant airplay on major national radio stations, 
+            including FIP (France) and Cosmo WDR (Germany).
+          </p>
+            
+          <h3>Collaborations</h3>
+          <p>
+            Brotha Lok is also a key architect in the revival of Nhạc Vàng—the nostalgic and poetic popular Vietnamese music banned in 1975. 
+            His collaborative spirit has led to heavy-hitting projects with the Saigonese underground scene. 
+            Notably, his work during the 2019 Villa Saigon art residency with raw flow rapper Blacka birthed the hit single "Sai Gon Co Em", 
+            which amassed over 30 million views on YouTube after being featured on the hit TV show Rap Viet (Season 2). 
+            Whether flipping banned bolero vinyl samples into dusty boom-bap tracks or engineering organic fusion EPs, 
+            Brotha Lok stands as a unique, transnational force in modern music production—making ancestral memories dance to the beat of a heavy 90s kick.
+          </p>
+        </article>
+
+        <aside class="bio-sidebar">
+          <div class="sidebar-widget">
+            <h4 class="widget-title">Artist Profile</h4>
+            <ul class="info-list">
+              <li><strong>Origin:</strong> Toulouse, France</li>
+              <li><strong>Heritage:</strong> Thái Trắng / Vietnam</li>
+              <li><strong>Affiliation:</strong> SACEM / Saigon Supersound</li>
+              <li><strong>Education:</strong> Audio Bachelor IMAAT (2023)</li>
+              <li><strong>Genres:</strong> Hip-Hop, Boom-Bap, World</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4 class="widget-title">Key Collaborations</h4>
+            <ul class="info-list">
+              <li>• Blacka (Vietnam)</li>
+              <li>• Saigon Soul Revival / Anh Minh (Vietnam)</li>
+              <li>• Afu-Ra (USA)</li>
+              <li>• Hazard Clique (Saigon)</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <!-- KEYQUOTE -->
-    <div class="quote-box">
-      <p>“Weaving invisible bridges between past and present, uniting the shores of Asia and the West through Hip-Hop and the soul of Nhạc Vàng.”</p>
-    </div>
-
-    <!-- PRESS & RECOGNITION ACCREDITATIONS -->
-    <section class="press-badges">
-      <div class="badge-item">
-        <span class="badge-title">Official Nomination</span>
-        <span class="badge-desc">Preis der Deutschen Schallplattenkritik (PdSK)</span>
-      </div>
-      <div class="badge-item">
-        <span class="badge-title">National Radio Broadcasts</span>
-        <span class="badge-desc">FIP (FR) • Cosmo WDR (DE) • Radio Campus</span>
-      </div>
-      <div class="badge-item">
-        <span class="badge-title">Streaming Impact</span>
-        <span class="badge-desc">30M+ YouTube Views ("Sai Gon Co Em")</span>
-      </div>
-    </section>
-
-    <!-- BIO GRID (Main Text + Sidebar) -->
-    <div class="bio-grid">
+    <!-- SECTION DISCOGRAPHY / PAST RELEASES (NOUVELLE SECTION AUDIO PORTFOLIO) -->
+    <section id="discography" class="discography-section">
+      <h2 class="section-title">Discography & Past Releases</h2>
       
-      <!-- TEXT COLUMN -->
-      <article class="bio-text">
-        <h3>Heritage & Syncretism</h3>
-        <p>
-          Brotha Lok (Lộc) is a French music producer, composer, and arranger based in Toulouse, France. 
-          Rooted in hip-hop culture since 1998 through breakdancing and beatmaking, he has meticulously refined the art of sampling to create a powerful, genre-bending sonic signature.
-        </p>
-        <p>
-          Of White Tai (Thái Trắng) descent—an ethnic minority from Northern Vietnam—Brotha Lok’s artistic journey is deeply intertwined with a quest for cultural identity. 
-          While preceding generations focused on integration and assimilation, Brotha Lok operates in the realm of cultural syncretism and "post-memory". 
-          He gathers the fragmented heritage of his ancestors and welds them with raw, heavy-hitting underground hip-hop, constructing a musical bridge between East and West, past and present.
-        </p>
+      <div class="album-grid">
 
-        <h3>Craft & Recognition</h3>
-        <p>
-          A formally trained audio engineer with a Bachelor’s degree in Audio Production from IMAAT, his technical expertise matches his artistic vision. 
-          His groundbreaking work caught the attention of the acclaimed German label Saigon Supersound, which distributed his debut instrumental solo album, "Tru Lai: Flèches contre balles" (January 2024). 
-          The project received international critical acclaim, earning a prestigious nomination for the Preis der Deutschen Schallplattenkritik (PdSK) and receiving significant airplay on major national radio stations, 
-          including FIP (France) and Cosmo WDR (Germany).
-        </p>
-          
-        <h3>Collaborations</h3>
-        <p>
-          Brotha Lok is also a key architect in the revival of Nhạc Vàng—the nostalgic and poetic popular Vietnamese music banned in 1975. 
-          His collaborative spirit has led to heavy-hitting projects with the Saigonese underground scene. 
-          Notably, his work during the 2019 Villa Saigon art residency with raw flow rapper Blacka birthed the hit single "Sai Gon Co Em", 
-          which amassed over 30 million views on YouTube after being featured on the hit TV show Rap Viet (Season 2). 
-          Whether flipping banned bolero vinyl samples into dusty boom-bap tracks or engineering organic fusion EPs, 
-          Brotha Lok stands as a unique, transnational force in modern music production—making ancestral memories dance to the beat of a heavy 90s kick.
-        </p>
-      </article>
-
-      <!-- SIDEBAR COLUMN -->
-      <aside class="bio-sidebar">
-        <div class="sidebar-widget">
-          <h4 class="widget-title">Artist Profile</h4>
-          <ul class="info-list">
-            <li><strong>Origin:</strong> Toulouse, France</li>
-            <li><strong>Heritage:</strong> Thái Trắng / Vietnam</li>
-            <li><strong>Affiliation:</strong> SACEM / Saigon Supersound</li>
-            <li><strong>Education:</strong> Audio Bachelor IMAAT (2023)</li>
-            <li><strong>Genres:</strong> Hip-Hop, Boom-Bap, World</li>
-          </ul>
+        <!-- ALBUM 1 -->
+        <div class="album-card">
+          <div>
+            <div class="album-cover-container">
+              <!-- Remplacez par le chemin exact de votre visuel -->
+              <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=500" alt="Tru Lai Album Cover" class="album-cover">
+            </div>
+            <div class="album-meta">
+              <span>Jan 2024</span>
+              <span>Saigon Supersound</span>
+            </div>
+            <h3 class="album-title">Tru Lai: Flèches contre balles</h3>
+            <p class="album-subtitle">Debut Instrumental Album • Vinyl & Digital</p>
+            <p class="album-desc">Nominated for the Preis der Deutschen Schallplattenkritik (PdSK). A deep exploration into Nhạc Vàng vinyl samples fused with dusty Boom-Bap drums.</p>
+          </div>
+          <div class="album-actions">
+            <button class="play-track-btn" onclick="playAndScroll('HQH82egFhFY')">▶ Play Track</button>
+            <a href="https://open.spotify.com" target="_blank" class="stream-link">Spotify</a>
+            <a href="https://bandcamp.com" target="_blank" class="stream-link">Bandcamp</a>
+          </div>
         </div>
 
-        <div class="sidebar-widget">
-          <h4 class="widget-title">Key Collaborations</h4>
-          <ul class="info-list">
-            <li>• Blacka (Vietnam)</li>
-            <li>• Saigon Soul Revival / Anh Minh (Vietnam)</li>
-            <li>• Afu-Ra (USA)</li>
-            <li>• Hazard Clique (Saigon)</li>
-          </ul>
+        <!-- SINGLE 1 -->
+        <div class="album-card">
+          <div>
+            <div class="album-cover-container">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=500" alt="Sai Gon Co Em Cover" class="album-cover">
+            </div>
+            <div class="album-meta">
+              <span>2019 / 2021</span>
+              <span>Villa Saigon Sessions</span>
+            </div>
+            <h3 class="album-title">Sai Gon Co Em</h3>
+            <p class="album-subtitle">Single feat. Blacka</p>
+            <p class="album-desc">Over 30M+ YouTube views. Produced during the Villa Saigon residency, fusing raw Saigon underground flows with traditional atmospheric samples.</p>
+          </div>
+          <div class="album-actions">
+            <button class="play-track-btn" onclick="playAndScroll('8HMwCKMFz70')">▶ Play Track</button>
+            <a href="https://open.spotify.com" target="_blank" class="stream-link">Spotify</a>
+            <a href="https://youtube.com" target="_blank" class="stream-link">YouTube</a>
+          </div>
         </div>
-      </aside>
 
-    </div>
+        <!-- SINGLE / REMIX 2 -->
+        <div class="album-card">
+          <div>
+            <div class="album-cover-container">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=500" alt="Ice Kem Cover" class="album-cover">
+            </div>
+            <div class="album-meta">
+              <span>2023</span>
+              <span>Independent</span>
+            </div>
+            <h3 class="album-title">Ice Kem</h3>
+            <p class="album-subtitle">Single Track</p>
+            <p class="album-desc">Heavy-hitting analog beats with intricate chop sampling techniques, bridging Western Boom-Bap texture with Asian musical roots.</p>
+          </div>
+          <div class="album-actions">
+            <button class="play-track-btn" onclick="playAndScroll('WYKV1it_fQ4')">▶ Play Track</button>
+            <a href="https://open.spotify.com" target="_blank" class="stream-link">Spotify</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- UPCOMING RELEASES / PROJECTS SECTION -->
     <section id="releases" class="projects-section">
-      <h2 class="section-title">Discography & Upcoming Projects</h2>
+      <h2 class="section-title">Upcoming Projects</h2>
       <div class="projects-grid">
         
         <div class="project-card">
@@ -541,7 +731,7 @@
         <div class="project-card">
           <span class="project-date">Mid-August 2026</span>
           <h4 class="project-name">Remix "Truc Xinh" of Saigon Soul Revival single</h4>
-          <p class="project-desc">I picked that infectious "La la la" backing vocal gimmick and transformed it into the main hook of the track, layered over a smooth, head-nodding groove. Combining Vietnamese cultural heritage with jazzy boom-bap dynamics.</p>
+          <p class="project-desc">I picked that infectious "La la la" backing vocal gimmick and transformed it into the main hook of the track, layered over a smooth, head-nodding groove.</p>
         </div>
 
         <div class="project-card">
@@ -567,22 +757,28 @@
   </footer>
 
   <script>
-    function switchVideo(videoId, startSec = 0, endSec = 0, element) {
+    // Fonction principale de changement de vidéo
+    function switchVideo(videoId, startSec = 0, endSec = 0, element = null) {
       const iframe = document.getElementById('main-video-player');
       
-      // Construction de la nouvelle URL avec autoplay & mute
-      let newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&enablejsapi=1&rel=0`;
+      let newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&enablejsapi=1&rel=0`;
       
       if (startSec > 0) newSrc += `&start=${startSec}`;
       if (endSec > 0) newSrc += `&end=${endSec}`;
 
-      // Mise à jour de la vidéo
       iframe.src = newSrc;
 
-      // Gestion visuelle du bouton actif
-      const buttons = document.querySelectorAll('.video-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      element.classList.add('active');
+      if (element) {
+        const buttons = document.querySelectorAll('.video-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        element.classList.add('active');
+      }
+    }
+
+    // Jouer le morceau et remonter doucement vers le lecteur vidéo principal
+    function playAndScroll(videoId) {
+      switchVideo(videoId, 0, 0, null);
+      document.getElementById('videos').scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 </body>
