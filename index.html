@@ -121,6 +121,47 @@
       scroll-margin-top: 100px;
     }
 
+    /* FOOTER SOCIALS AMÉLIORÉS ET LISIBLES SUR MOBILE */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* S'adapte proprement si l'écran est très étroit */
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: all 0.3s ease;
+  min-width: 140px; /* Taille confortable au toucher sur mobile */
+}
+
+/* Effet au survol / clic */
+.footer-socials a:hover {
+  background-color: #d11212;
+  border-color: #d11212;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .footer-socials a {
+    width: 100%; /* S'étire sur toute la largeur sur mobile pour être ultra lisible */
+    max-width: 280px;
+  }
+}
+
     /* SECTION VIDÉO PLEINE LARGEUR */
     .full-width-video {
       width: 100%;
@@ -589,6 +630,17 @@
   font-weight: 400;
 }
 
+
+/* OPTIMISATION MOBILE SPECIFIQUE */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 25px 15px;
+  }
+  .contact-btn {
+    width: 100%; /* Prend toute la largeur sur petit écran */
+  }
+}
+
 @keyframes tickerAnimation {
   0% {
     transform: translateX(0);
@@ -880,9 +932,7 @@
   <footer id="contact">
     <div class="footer-socials">
       <a href="https://www.instagram.com/brothalok/" target="_blank">Instagram</a>
-      <a href="https://open.spotify.com/" target="_blank">Spotify</a>
-      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-      <a href="https://www.saigonsupersound.com/" target="_blank">Saigon Supersound</a>
+      <a href="https://www.facebook.com/brotha.lok/" target="_blank">Facebook</a>
     </div>
     <p class="footer-copy">&copy; 2026 BROTHA LOK. ALL RIGHTS RESERVED. REGISTERED SACEM ARTIST.</p>
   </footer>
