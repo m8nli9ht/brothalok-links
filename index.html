@@ -540,6 +540,63 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
+    /* BANDEAU DÉFILANT / CAROUSEL EN HAUT DE PAGE */
+.ticker-bar {
+  width: 100%;
+  background-color: #111111;
+  border-bottom: 1px solid #222222;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 101;
+}
+
+.ticker-track {
+  display: inline-flex;
+  align-items: center;
+  animation: tickerAnimation 28s linear infinite;
+}
+
+/* Pause au survol de la souris */
+.ticker-bar:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #aaaaaa;
+  text-decoration: none;
+}
+
+.ticker-item .date {
+  color: #d11212;
+  margin-right: 8px;
+  font-weight: 800;
+}
+
+.ticker-item .separator {
+  color: #444444;
+  margin-left: 30px;
+  font-weight: 400;
+}
+
+@keyframes tickerAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
     /* RESPONSIVE */
     @media (max-width: 850px) {
@@ -558,7 +615,22 @@
   </style>
 </head>
 <body>
+<!-- CAROUSEL / BANDEAU DÉFILANT DES PROCHAINES SORTIES -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <!-- SERIE 1 -->
+    <a href="#releases" class="ticker-item"><span class="date">[JULY 27, 2026]</span> Mixtape "Bản nháp: The Lost Tapes" <span class="separator">•</span></a>
+    <a href="#releases" class="ticker-item"><span class="date">[AUG 18, 2026]</span> Single "Bản Nháp" feat. Blacka & Mikeezy <span class="separator">•</span></a>
+    <a href="#releases" class="ticker-item"><span class="date">[MID-AUG 2026]</span> Remix "Truc Xinh" (Saigon Soul Revival) <span class="separator">•</span></a>
+    <a href="#releases" class="ticker-item"><span class="date">[NOV 2026]</span> EP "The Living Roots Bridge" feat. Anh Minh <span class="separator">•</span></a>
 
+    <!-- DUPLICATION POUR DÉFILEMENT EN BOUCLE SANS TROU -->
+    <a href="#releases" class="ticker-item"><span class="date">[JULY 27, 2026]</span> Mixtape "Bản nháp: The Lost Tapes" <span class="separator">•</span></a>
+    <a href="#releases" class="ticker-item"><span class="date">[AUG 18, 2026]</span> Single "Bản Nháp" feat. Blacka & Mikeezy <span class="separator">•</span></a>
+    <a href="#releases" class="ticker-item"><span class="date">[MID-AUG 2026]</span> Remix "Truc Xinh" (Saigon Soul Revival) <span class="separator">•</span></a>
+    <a href="#releases" class="ticker-item"><span class="date">[NOV 2026]</span> EP "The Living Roots Bridge" feat. Anh Minh <span class="separator">•</span></a>
+  </div>
+</div>
   <!-- HEADER / NAVIGATION -->
   <header>
     <div class="brand-logo">
