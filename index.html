@@ -582,6 +582,8 @@
       text-transform: uppercase;
     }
     /* BANDEAU DÉFILANT / CAROUSEL EN HAUT DE PAGE */
+
+    /* BANDEAU DÉFILANT TOUJOURS VISIBLE (STICKY/FIXED) */
 .ticker-bar {
   width: 100%;
   background-color: #111111;
@@ -591,8 +593,10 @@
   height: 38px;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 101;
+  position: fixed; /* Reste fixe au défilement */
+  top: 0;
+  left: 0;
+  z-index: 1001; /* Priorité d'affichage maximale */
 }
 
 .ticker-track {
