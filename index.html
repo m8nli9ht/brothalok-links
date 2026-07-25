@@ -37,18 +37,18 @@
 
     /* HEADER & NAVIGATION */
     header {
-      width: 100%;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1a1a1a;
-      background-color: rgba(8, 8, 8, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+  background-color: rgba(8, 8, 8, 0.95);
+  position: sticky;
+  top: 38px; /* Changé de top: 0 à top: 38px pour se placer sous la ticker-bar */
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
 
     /* CSS LOGO CROPPED */
     .cropped-image {
@@ -118,9 +118,8 @@
 
     /* GESTION DE LA MARGE DES ANCRES */
     section, .main-container, footer {
-      scroll-margin-top: 100px;
-    }
-
+  scroll-margin-top: 140px; /* Augmenté à 140px pour ne pas masquer les titres lors du clic sur le menu */
+}
     /* FOOTER SOCIALS AMÉLIORÉS ET LISIBLES SUR MOBILE */
 .footer-socials {
   display: flex;
@@ -655,13 +654,12 @@
 }
 
     /* RESPONSIVE */
-
-    /* OPTIMISATION MOBILE POUR LE LOGO */
-@media (max-width: 850px) {
+    @media (max-width: 850px) {
   header {
     padding: 15px 20px;
     flex-direction: column;
     gap: 15px;
+    top: 38px; /* Assure le bon positionnement sous le bandeau sur mobile */
   }
 
   /* Réduction de la hauteur du logo à 80% (96px au lieu de 120px) */
