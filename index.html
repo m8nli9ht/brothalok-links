@@ -3,11 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIOGRAPHY | BROTHA LOK - Official Producer Site</title>
+  <title>BROTHA LOK | Producer, Composer &amp; Arranger</title>
+  <meta name="description" content="Brotha Lok is a Toulouse-based producer, composer, and arranger bridging Vietnamese musical heritage and underground hip-hop.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --font-display: 'Outfit', sans-serif;
+      --color-background: #000000;
+      --color-surface: #1e1b32;
+      --color-line: #39354e;
+      --color-text: #e8e5f1;
+      --color-muted: #c2bcd7;
+      --color-lacquer: #c2bcd7;
+      --color-lacquer-strong: #e8e5f1;
+      --color-lacquer-hover: #c2bcd7;
+      --color-jade: #c2bcd7;
+    }
+
     /* AUTO SCROLL FLUIDE */
     html {
       scroll-behavior: smooth;
@@ -21,15 +35,15 @@
     }
 
     body {
-      background-color: #080808;
-      color: #e0e0e0;
+      background-color: var(--color-background);
+      color: var(--color-text);
       font-family: 'Inter', sans-serif;
       line-height: 1.7;
       letter-spacing: 0.02em;
     }
 
     a {
-      color: #ffffff;
+      color: var(--color-text);
       text-decoration: none;
       transition: all 0.3s ease;
     }
@@ -105,7 +119,7 @@
     }
 
     .header-socials a:hover {
-      color: #d11212;
+      color: var(--color-jade);
       transform: translateY(-2px);
     }
 
@@ -147,8 +161,8 @@
 
 /* Effet au survol / clic */
 .footer-socials a:hover {
-  background-color: #d11212;
-  border-color: #d11212;
+  background-color: var(--color-lacquer-strong);
+  border-color: var(--color-lacquer-strong);
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -181,6 +195,66 @@
       height: 100%;
       border: none;
       display: block;
+    }
+
+    .artist-intro {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 42px 25px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .artist-intro h1 {
+      margin-top: 5px;
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .artist-intro-copy {
+      max-width: 690px;
+    }
+
+    .artist-intro-copy p:last-child {
+      margin-top: 8px;
+      color: #aaaaaa;
+      font-size: 0.95rem;
+    }
+
+    .artist-intro-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .intro-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border: 1px solid #333333;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .intro-link.primary {
+      background-color: var(--color-lacquer-strong);
+      border-color: var(--color-lacquer-strong);
+    }
+
+    .intro-link:hover {
+      border-color: var(--color-jade);
+      color: var(--color-jade);
     }
 
     /* SÉLECTEUR DE VIDÉO AVEC ICÔNES */
@@ -218,14 +292,14 @@
     }
 
     .video-btn:hover {
-      color: #ffffff;
-      border-color: #d11212;
+      color: var(--color-jade);
+      border-color: var(--color-jade);
     }
 
     .video-btn.active {
-      background-color: #d11212;
+      background-color: var(--color-lacquer-strong);
       color: #ffffff;
-      border-color: #d11212;
+      border-color: var(--color-lacquer-strong);
     }
 
     /* MAIN WRAPPER */
@@ -250,14 +324,14 @@
 
     /* QUOTE / HIGHLIGHT BOX */
     .quote-box {
-      border-left: 3px solid #d11212;
+      border-left: 3px solid var(--color-lacquer);
       padding: 20px 30px;
       margin-bottom: 50px;
       background-color: #0e0e0e;
     }
 
     .quote-box p {
-      font-family: 'Cinzel', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.25rem;
       color: #ffffff;
       font-style: italic;
@@ -289,7 +363,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      color: #d11212;
+      color: var(--color-lacquer);
     }
 
     .badge-desc {
@@ -307,7 +381,7 @@
     }
 
     .bio-text h3 {
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-size: 1.4rem;
       color: #ffffff;
       margin-top: 30px;
@@ -368,7 +442,7 @@
 
     /* TITRES DE SECTIONS */
     .section-title {
-      font-family: 'Cinzel', serif;
+      font-family: var(--font-display);
       font-size: 1.8rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
@@ -401,7 +475,7 @@
     }
 
     .album-card:hover {
-      border-color: #d11212;
+      border-color: var(--color-jade);
     }
 
     .album-cover-container {
@@ -429,7 +503,7 @@
       justify-content: space-between;
       font-size: 0.75rem;
       font-weight: 800;
-      color: #d11212;
+      color: var(--color-lacquer);
       letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 8px;
@@ -467,7 +541,7 @@
     }
 
     .play-track-btn {
-      background-color: #d11212;
+      background-color: var(--color-lacquer-strong);
       color: #ffffff;
       border: none;
       padding: 8px 16px;
@@ -483,7 +557,7 @@
     }
 
     .play-track-btn:hover {
-      background-color: #b00d0d;
+      background-color: var(--color-lacquer-hover);
     }
 
     .stream-link {
@@ -526,7 +600,7 @@
     .project-date {
       font-size: 0.7rem;
       font-weight: 800;
-      color: #d11212;
+      color: var(--color-lacquer);
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
@@ -579,6 +653,19 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
+
+    .contact-heading {
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+    }
+
+    .contact-copy {
+      margin-bottom: 20px;
+      color: #888888;
+      font-size: 0.9rem;
+    }
     /* BANDEAU DÉFILANT / CAROUSEL EN HAUT DE PAGE */
 
     /* BANDEAU DÉFILANT TOUJOURS VISIBLE (STICKY/FIXED) */
@@ -621,7 +708,7 @@
 }
 
 .ticker-item .date {
-  color: #d11212;
+  color: var(--color-lacquer);
   margin-right: 8px;
   font-weight: 800;
 }
@@ -669,8 +756,488 @@
 
   .header-right {
     align-items: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: clamp(12px, 4vw, 24px);
+    flex-wrap: wrap;
+  }
+
+  .artist-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
   }
   .bio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .artist-intro {
+    padding: 30px 20px;
+  }
+
+  .artist-intro-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .intro-link {
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+
+/* FIP DARK EDITORIAL THEME */
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0;
+}
+
+header {
+  min-height: 94px;
+  padding: 10px max(24px, calc((100vw - 1180px) / 2));
+  background: rgba(0, 0, 0, 0.96);
+  border-bottom: 1px solid var(--color-line);
+  box-shadow: none;
+}
+
+.cropped-image,
+.brand-logo img {
+  width: 210px;
+  height: 90px;
+  max-height: 90px;
+  object-fit: cover;
+  object-position: center 51%;
+}
+
+.nav-links a,
+.header-socials a {
+  color: var(--color-muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active,
+.header-socials a:hover {
+  color: var(--color-lacquer-strong);
+}
+
+.ticker-bar {
+  height: 34px;
+  background: var(--color-surface);
+  border: 0;
+}
+
+.ticker-item,
+.ticker-item .date,
+.ticker-item .separator {
+  color: var(--color-text);
+}
+
+.artist-intro {
+  max-width: 960px;
+  display: block;
+  padding: 44px 28px 30px;
+}
+
+.artist-intro-copy {
+  max-width: 820px;
+}
+
+.artist-intro .page-subtitle {
+  color: var(--color-lacquer-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.artist-intro h1 {
+  margin: 10px 0 8px;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 600;
+  line-height: 1.04;
+}
+
+.artist-intro-copy p:last-child {
+  margin-top: 0;
+  color: var(--color-muted);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.article-meta {
+  margin-top: 18px;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
+.article-meta span {
+  padding: 0 6px;
+  color: var(--color-lacquer-strong);
+}
+
+.artist-intro-actions {
+  margin-top: 22px;
+}
+
+.intro-link {
+  min-height: 44px;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: #1e1b32;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.intro-link.primary {
+  background: var(--color-lacquer-strong);
+  color: #1e1b32;
+}
+
+.intro-link:not(.primary) {
+  color: var(--color-text);
+}
+
+.intro-link:hover {
+  background: var(--color-lacquer-hover);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.intro-link.primary:hover {
+  background: var(--color-lacquer-hover);
+  color: #1e1b32;
+}
+
+.intro-link svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: currentColor;
+}
+
+.intro-link:focus-visible,
+.play-track-btn:focus-visible {
+  outline: 3px solid var(--color-lacquer-strong);
+  outline-offset: 3px;
+}
+
+.artist-hero-image {
+  width: min(100% - 48px, 1120px);
+  margin: 0 auto 36px;
+}
+
+.artist-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 660px;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.artist-hero-image figcaption {
+  padding-top: 8px;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
+.full-width-video {
+  width: min(100% - 48px, 920px);
+  margin: 0 auto 44px;
+  background: #111111;
+  border: 0;
+}
+
+.video-container {
+  max-height: none;
+}
+
+.video-switcher {
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 12px;
+  background: var(--color-background);
+  border: 1px solid var(--color-line);
+}
+
+.video-btn {
+  border-color: var(--color-line);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.video-btn:hover {
+  color: var(--color-lacquer-strong);
+  border-color: var(--color-lacquer-strong);
+}
+
+.video-btn.active {
+  background: var(--color-lacquer-strong);
+  border-color: var(--color-lacquer-strong);
+  color: #1e1b32;
+}
+
+.main-container {
+  max-width: 1020px;
+  padding: 30px 28px 64px;
+}
+
+.page-header {
+  display: none;
+}
+
+.quote-box {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  padding: 6px 22px;
+  background: transparent;
+  border-left: 3px solid var(--color-lacquer-strong);
+}
+
+.quote-box p {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.press-badges {
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  margin-bottom: 42px;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  text-align: left;
+}
+
+.badge-item {
+  align-items: flex-start;
+  max-width: 31%;
+}
+
+.badge-title,
+.album-meta,
+.project-date {
+  color: var(--color-lacquer-strong);
+}
+
+.badge-desc {
+  color: var(--color-text);
+}
+
+.bio-grid {
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 0.85fr);
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.bio-text h3 {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  border-color: var(--color-line);
+}
+
+.bio-text p {
+  color: var(--color-muted);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.sidebar-widget,
+.album-card,
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+}
+
+.sidebar-widget {
+  padding: 20px;
+}
+
+.widget-title,
+.info-list strong,
+.album-title,
+.project-name {
+  color: var(--color-text);
+}
+
+.widget-title,
+.album-actions {
+  border-color: var(--color-line);
+}
+
+.info-list li,
+.album-subtitle,
+.album-desc,
+.project-desc {
+  color: var(--color-muted);
+}
+
+.section-title {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.discography-section,
+.projects-section {
+  border-color: var(--color-line);
+}
+
+.album-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.album-card {
+  padding: 16px;
+}
+
+.album-title,
+.project-name {
+  text-transform: none;
+}
+
+.play-track-btn {
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: #1e1b32;
+  background: var(--color-lacquer-strong);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.play-track-btn:hover {
+  background: var(--color-lacquer-hover);
+  color: #1e1b32;
+  transform: translateY(-1px);
+}
+
+footer {
+  background: var(--color-surface);
+  border-color: var(--color-line);
+}
+
+.contact-heading,
+.footer-socials a:hover {
+  color: var(--color-text);
+}
+
+.contact-copy {
+  color: var(--color-muted);
+}
+
+.footer-copy {
+  color: var(--color-muted);
+}
+
+.footer-socials a {
+  padding: 10px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  color: var(--color-text);
+}
+
+.footer-socials a:hover {
+  background: var(--color-lacquer-strong);
+  border-color: var(--color-lacquer-strong);
+  color: #1e1b32;
+  transform: none;
+}
+
+@media (max-width: 850px) {
+  header {
+    top: 34px;
+    padding: 10px 20px;
+  }
+
+  .cropped-image,
+  .brand-logo img {
+    width: 150px;
+    height: 64px;
+    max-height: 64px;
+  }
+
+  .artist-intro {
+    padding: 34px 24px 26px;
+  }
+
+  .bio-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .artist-hero-image,
+  .full-width-video {
+    width: calc(100% - 32px);
+  }
+
+  .artist-intro h1 {
+    font-size: 3rem;
+  }
+
+  .artist-intro-copy p:last-child {
+    font-size: 1.05rem;
+  }
+
+  .artist-intro-actions {
+    flex-direction: column;
+  }
+
+  .intro-link {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .main-container {
+    padding: 26px 20px 48px;
+  }
+
+  .press-badges {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .badge-item {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .album-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -681,15 +1248,15 @@
 <div class="ticker-bar">
   <div class="ticker-track">
     <!-- SERIE 1 -->
-    <a href="#releases" class="ticker-item"><span class="date">[JULY 27, 2026]</span> Mixtape "Bản nháp: The Lost Tapes" <span class="separator">•</span></a>
-    <a href="#releases" class="ticker-item"><span class="date">[AUG 18, 2026]</span> Single "Bản Nháp" feat. Blacka & Mikeezy <span class="separator">•</span></a>
-    <a href="#releases" class="ticker-item"><span class="date">[AUG 21, 2026]</span> Remix "Truc Xinh" (Saigon Soul Revival) <span class="separator">•</span></a>
+    <a href="#discography" class="ticker-item"><span class="date">[OUT NOW]</span> Mixtape "Bản nháp: The Lost Tapes" <span class="separator">•</span></a>
+    <a href="#discography" class="ticker-item"><span class="date">[OUT NOW]</span> Single "Bản Nháp" feat. Blacka & Mikeezy <span class="separator">•</span></a>
+    <a href="#discography" class="ticker-item"><span class="date">[OUT NOW]</span> Remix "Trúc Xinh" (Saigon Soul Revival) <span class="separator">•</span></a>
     <a href="#releases" class="ticker-item"><span class="date">[NOV 2026]</span> EP "The Living Roots Bridge" feat. Anh Minh <span class="separator">•</span></a>
 
     <!-- DUPLICATION POUR DÉFILEMENT EN BOUCLE SANS TROU -->
-    <a href="#releases" class="ticker-item"><span class="date">[JULY 27, 2026]</span> Mixtape "Bản nháp: The Lost Tapes" <span class="separator">•</span></a>
-    <a href="#releases" class="ticker-item"><span class="date">[AUG 18, 2026]</span> Single "Bản Nháp" feat. Blacka & Mikeezy <span class="separator">•</span></a>
-    <a href="#releases" class="ticker-item"><span class="date">[AUG 21, 2026]</span> Remix "Truc Xinh" (Saigon Soul Revival) <span class="separator">•</span></a>
+    <a href="#discography" class="ticker-item"><span class="date">[OUT NOW]</span> Mixtape "Bản nháp: The Lost Tapes" <span class="separator">•</span></a>
+    <a href="#discography" class="ticker-item"><span class="date">[OUT NOW]</span> Single "Bản Nháp" feat. Blacka & Mikeezy <span class="separator">•</span></a>
+    <a href="#discography" class="ticker-item"><span class="date">[OUT NOW]</span> Remix "Trúc Xinh" (Saigon Soul Revival) <span class="separator">•</span></a>
     <a href="#releases" class="ticker-item"><span class="date">[NOV 2026]</span> EP "The Living Roots Bridge" feat. Anh Minh <span class="separator">•</span></a>
   </div>
 </div>
@@ -738,6 +1305,24 @@
       </div>
     </div>
   </header>
+
+  <section class="artist-intro" aria-labelledby="artist-name">
+    <div class="artist-intro-copy">
+      <p class="page-subtitle">Artist profile · Toulouse, France</p>
+      <h1 id="artist-name">BROTHA LOK</h1>
+      <p>Vietnamese musical memory, rebuilt through underground hip-hop.</p>
+      <p class="article-meta">Independent producer, composer and arranger <span aria-hidden="true">·</span> 2026</p>
+    </div>
+    <div class="artist-intro-actions">
+      <a class="intro-link primary" href="https://open.spotify.com/intl-fr/album/2wGz0jxTDLcqy18yxyH22H" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Listen to Tru Lai</a>
+      <a class="intro-link" href="#contact">Bookings &amp; collaborations</a>
+    </div>
+  </section>
+
+  <figure class="artist-hero-image">
+    <img src="./mat-4.jpg" alt="Brotha Lok working at a mixing console in the studio">
+    <figcaption>Brotha Lok in the studio</figcaption>
+  </figure>
 
   <!-- HERO : VIDÉO YOUTUBE PLEINE LARGEUR -->
   <section id="videos" class="full-width-video">
@@ -800,31 +1385,20 @@
         <article class="bio-text">
           <h3>Heritage & Syncretism</h3>
           <p>
-            Brotha Lok (Lộc) is a French music producer, composer, and arranger based in Toulouse, France. 
-            Rooted in hip-hop culture since 1997 through breakdancing and beatmaking, he has meticulously refined the art of sampling to create a powerful, genre-bending sonic signature.
+            Brotha Lok (Lộc) is a Toulouse-based French producer, composer, and arranger. Rooted in hip-hop since 1997, he uses sampling to connect underground beats with the musical heritage of his White Tai (Thái Trắng) family from Northern Vietnam.
           </p>
           <p>
-            Of White Tai (Thái Trắng) descent—an ethnic minority from Northern Vietnam—Brotha Lok’s artistic journey is deeply intertwined with a quest for cultural identity. 
-            While preceding generations focused on integration and assimilation, Brotha Lok operates in the realm of cultural syncretism and "post-memory". 
-            He gathers the fragmented heritage of his ancestors and welds them with raw, heavy-hitting underground hip-hop, constructing a musical bridge between East and West, past and present.
+            His work brings inherited memory into conversation with the present, bridging Vietnamese musical traditions and the West through hip-hop.
           </p>
 
           <h3>Craft & Recognition</h3>
           <p>
-            A formally trained producer with a Bachelor’s degree in Audio Production from IMAAT, his technical expertise matches his artistic vision. 
-            His groundbreaking work caught the attention of the acclaimed German label Saigon Supersound, which distributed his debut instrumental solo album, "Tru Lai: Flèches contre balles" in 2024. 
-            The project received international critical acclaim, earning a prestigious nomination for the Preis der Deutschen Schallplattenkritik (PdSK) and receiving significant airplay on major national radio stations, 
-            including FIP (France) and Cosmo WDR (Germany).
+            A graduate of IMAAT’s audio production program, Brotha Lok released his debut instrumental album, "Tru Lai: Flèches contre balles," with Saigon Supersound in 2024. The album was nominated for the Preis der Deutschen Schallplattenkritik and received airplay on FIP and Cosmo WDR.
           </p>
             
           <h3>Collaborations</h3>
           <p>
-            Brotha Lok is also a key architect in the revival of Nhạc Vàng—the nostalgic and poetic popular Vietnamese music banned in 1975. 
-            His collaborative spirit has led to heavy-hitting projects with the Saigonese underground scene. 
-            Notably, his work during the 2019 Villa Saigon art residency with raw flow rapper Blacka birthed the hit single "Sai Gon Co Em", 
-            which amassed over 30 million views on YouTube after being featured on the hit TV show Rap Viet (Season 2). 
-            Whether flipping banned bolero vinyl samples into dusty boom-bap tracks or engineering organic fusion EPs, 
-            Brotha Lok stands as a unique, transnational force in modern music production—making ancestral memories dance to the beat of heavy 90s drums
+            His collaborations include Blacka, Saigon Soul Revival, Anh Minh, and Afu-Ra. The 2019 Villa Saigon session with Blacka led to "Sai Gon Co Em," later featured on Rap Viet Season 2 and viewed more than 30 million times on YouTube.
           </p>
         </article>
 
@@ -977,7 +1551,6 @@
       <div class="projects-grid">
         
         <div class="project-card">
-        <div class="project-card">
           <span class="project-date">Starting Nov. 2026</span>
           <h4 class="project-name">EP "The Living Roots Bridge"</h4>
           <p class="project-desc">A 5-track EP in collaboration with Anh Minh (Saigon Soul Revival) reinterpreting major classics of Nhạc Vàng.</p>
@@ -990,9 +1563,13 @@
 
   <!-- FOOTER -->
   <footer id="contact">
+    <h2 class="contact-heading">Bookings &amp; production</h2>
+    <p class="contact-copy">For beats, collaborations, and project enquiries.</p>
     <div class="footer-socials">
-      <a href="https://www.instagram.com/brothalok/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/brotha.lok/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/brothalok/" target="_blank" rel="noopener noreferrer">Message on Instagram</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/brotha.lok/" target="_blank" rel="noopener noreferrer">Facebook</a>
     </div>
     <p class="footer-copy">&copy; 2026 BROTHA LOK. ALL RIGHTS RESERVED. REGISTERED SACEM ARTIST.</p>
   </footer>
